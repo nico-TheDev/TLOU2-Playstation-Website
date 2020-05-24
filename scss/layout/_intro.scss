@@ -1,0 +1,57 @@
+.intro{
+    position: relative;
+    height: 100vh;
+
+    &::before{
+        content:'';
+        width: 100%;
+        height: 10vh;
+        position: absolute;
+        background-image: linear-gradient(to bottom,black,rgba(black,0.8),transparent);
+        z-index: 2;
+        left: 0;
+        top: 0;
+    }
+      &::after{
+        content:'';
+        width: 100%;
+        height: 10vh;
+        position: absolute;
+        background-image: linear-gradient(to top,black,rgba(black,0.8),transparent);
+        z-index: 2;
+        left: 0;
+        bottom: 0;
+    }
+
+    &__cover{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60%;
+
+        &::before{
+            content: '';
+            width: 20%;
+            height: 100%;
+            background-image: linear-gradient(to right,black,rgba(black,0.8),transparent);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    &__text{
+        position: relative;
+        width: 40%;
+    }
+
+    .desc{
+        width: 95%;
+    }
+}

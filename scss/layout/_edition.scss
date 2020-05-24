@@ -1,0 +1,110 @@
+.edition{
+    position: relative;
+    background-image: url(/img/bg-1.jpg);
+    background-position: center;
+    background-size: cover;
+
+    &__list{
+        display: flex;
+    }
+
+    &__item{
+        text-transform: uppercase;
+        font-family: 'Oswald',sans-serif;
+        margin-right: 2rem;
+        color: $gray;
+        font-weight: bold;
+        cursor: pointer;
+        border-bottom: 4px solid transparent;
+        padding-bottom: 3px;
+        &:hover{
+            color: white;
+        }
+    }
+
+    .slider{
+        position: relative;
+    }
+
+    &__slider{
+        position: relative;
+        height: 85vh;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__slide{
+        position: absolute;
+        width: 100%;
+        height: max-content;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-gap: 2rem;
+        grid-template-areas: 
+        ". cont"
+        "cover list"
+        ;
+        cursor: grab;
+    }
+    
+    &__img{
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    
+    
+    &__text{
+        grid-area: cont;
+    }
+
+    &__cover{
+        grid-area: cover;
+        margin-bottom: 10vh;
+    }
+
+    &__features{
+        grid-area: list;
+        height: 70vh;
+        overflow-y: scroll;
+        pointer-events: none;
+        
+        & > *:not(:last-child){
+            margin-bottom: 1rem;
+            
+        }
+        
+        &::-webkit-scrollbar{
+            width: 4px;
+        }
+        &::-webkit-scrollbar-track{
+            
+            background-color: rgba(black,0.5);
+        }
+        
+        &::-webkit-scrollbar-thumb{
+            background-color: $main;
+        }
+        
+    }
+    
+    &__feature-item{
+        display:flex;
+        align-items: center;
+        color: white;
+        &::before{
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: $main;
+            display: inline-block;
+            margin-right: 1rem;
+        }
+        
+        &::selection{
+            background-color: transparent;
+        }
+    }
+    
+}

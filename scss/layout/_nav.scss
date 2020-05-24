@@ -1,0 +1,38 @@
+.nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: 100;
+    transition: 300ms ease;
+
+    .container{
+        height: 12vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo{
+        width: 8rem;
+        height: auto;
+        opacity: 0;
+        transition: 300ms ease;
+    }
+
+    &__list{
+        display: flex;
+    }
+
+    &__link{
+        margin-left: 3rem;
+        font-size: 1.3rem;
+        color: $gray;
+        font-weight: bold;
+        font-family: 'Oswald',sans-serif;
+        &:hover{
+            color: $main;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@mixin query($bp) {
+    @if ($bp == tabp){
+        @media only screen and (max-width:900px){@content};
+    }
+    @if ($bp == cp){
+        @media only screen and (max-width:700px){@content};
+    }
+    @if ($bp == scp){
+        @media only screen and (max-width:400px){@content};
+    }
+
+}
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin absoluteCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

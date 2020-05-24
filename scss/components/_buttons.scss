@@ -1,0 +1,42 @@
+.btn{
+    background-color: $main;
+    text-transform: uppercase;
+    color: black;
+    font-family: 'Oswald',sans-serif;
+    font-weight: bold;
+    padding: 0.3em 1em;
+    border: 3px solid $main;
+    transition: 300ms;
+    &:link,
+    &:visited{
+        background-color: $main;
+        text-transform: uppercase;
+        color: black;
+        font-family: 'Oswald',sans-serif;
+        font-weight: bold;
+        padding: 0.5em 1em;
+        border: 3px solid $main;
+    }
+
+    &:hover{
+        background-color: rgba($main,0.5);
+        color: white;
+    }
+}
+
+.slider-btn{
+    background-color: $main;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+}
+
+
+.next{
+    right: -4rem;
+}
+
+.prev{
+    left: -4rem;
+}
