@@ -1,0 +1,40 @@
+.trailer{
+    position: relative;
+    cursor: pointer;
+    &:hover .icon{
+        fill: red  ;
+    }
+
+
+
+    &__img,
+    .desc
+    {
+        width: 90%;
+        height: auto;
+        margin: 1rem auto;
+        display: block;
+    }
+
+    .icon{
+        @include absoluteCenter;
+        width: 7rem;
+        height: 7rem;
+    }
+}
+
+.mini-trailer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1rem;
+
+    .trailer{
+        &__img{
+            width: 100%;
+        }
+        .icon{
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+}

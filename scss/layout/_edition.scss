@@ -46,6 +46,7 @@
         "cover list"
         ;
         cursor: grab;
+        transition: 500ms ease-in;
     }
     
     &__img{
@@ -66,9 +67,8 @@
 
     &__features{
         grid-area: list;
-        height: 70vh;
+        height: 80vh;
         overflow-y: scroll;
-        pointer-events: none;
         
         & > *:not(:last-child){
             margin-bottom: 1rem;

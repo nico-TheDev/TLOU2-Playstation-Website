@@ -1,0 +1,35 @@
+.story{
+
+    .title{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__slider{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 2rem;
+    }
+
+    &__cover{
+        overflow: hidden;
+        margin-bottom: 1rem;
+
+        &:hover .story__img{
+            transform: scale(1.1);
+        }
+    }
+
+    .title-2{
+        line-height: 1.2;
+    }
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transition: 300ms;
+    }
+}
