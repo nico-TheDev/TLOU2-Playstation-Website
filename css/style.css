@@ -610,6 +610,88 @@ section {
      object-fit: cover;
 }
 
+.footer {
+  background-color: #333333;
+}
+
+.footer__head {
+  border-bottom: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 2%;
+}
+
+.footer__logo {
+  margin-right: 1rem;
+}
+
+.footer__list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__item::after {
+  content: '';
+  height: 16px;
+  width: 2px;
+  background-color: skyblue;
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.footer__link {
+  font-size: 1.1rem;
+}
+
+.footer__link:hover {
+  color: skyblue;
+}
+
+.footer__bottom {
+  padding: 2rem 2%;
+}
+
+.footer .country {
+  margin-right: 2rem;
+}
+
+.footer .country,
+.footer .sony {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.footer .country:hover,
+.footer .sony:hover {
+  color: skyblue;
+}
+
+.footer .country .icon,
+.footer .sony .icon {
+  fill: white;
+  margin-right: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.footer .desc {
+  padding: 0 2%;
+}
+
 .btn {
   background-color: #fec107;
   text-transform: uppercase;
@@ -681,12 +763,15 @@ section {
 }
 
 .trailer {
-  position: relative;
   cursor: pointer;
 }
 
 .trailer:hover .icon {
   fill: red;
+}
+
+.trailer__cover {
+  position: relative;
 }
 
 .trailer__img,
@@ -722,6 +807,14 @@ section {
 .mini-trailer .trailer .icon {
   width: 4rem;
   height: 4rem;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.logo__img {
+  width: 20rem;
 }
 
 .showNavi {

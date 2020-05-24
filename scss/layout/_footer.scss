@@ -1,0 +1,69 @@
+.footer{
+    background-color: hsl(0, 0%, 20%);
+
+    &__head{
+        border-bottom: 1px solid white;
+        display: flex;
+        align-items: center;
+        padding: 1rem 2%;
+    }
+
+    &__logo{
+        margin-right: 1rem;
+    }
+
+    &__list{
+        display: inline-flex;
+        align-items: center;
+    }
+
+    &__item{
+
+        &::after{
+            content: '';
+            height: 16px;
+            width: 2px;
+            background-color: skyblue;
+            display: inline-block;
+            margin: 0 0.5rem;
+        }
+    }
+
+    &__link{
+        font-size: 1.1rem;
+        &:hover{
+            color: skyblue;
+        }
+    }
+
+    &__bottom{
+        padding: 2rem 2%;
+    }
+
+    .country{
+        margin-right: 2rem;
+    }
+
+    .country,
+    .sony{
+        display: inline-flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        &:hover{
+            color: skyblue;
+        }
+
+        .icon{
+            fill:white;
+            margin-right: 1rem;
+            width:2rem;
+            height: 2rem;
+        }
+    }
+
+    .desc{
+        padding: 0 2%;
+    }
+}

@@ -1,8 +1,11 @@
 .trailer{
-    position: relative;
     cursor: pointer;
     &:hover .icon{
         fill: red  ;
+    }
+
+    &__cover{
+        position: relative;
     }
 
 
@@ -36,5 +39,13 @@
             width: 4rem;
             height: 4rem;
         }
+    }
+}
+
+.logo{
+    display: inline-block;
+
+    &__img{
+        width: 20rem;
     }
 }
