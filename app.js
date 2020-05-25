@@ -251,13 +251,13 @@ function showModal(e){
 screenshots.forEach((shot,index)=>{
     shot.addEventListener('click',function(){
         modalCounter.style.opacity = '1';
+        modalCounter.textContent = `${modalCount}/${screenshots.length}`;
         modalImg.style.display = 'block';
         modalCount = index + 1;
         modal.classList.add('showModal');
         modal.lastElementChild.firstElementChild.setAttribute('src',`./img/${modalCount}.jpg`);
         modalNextBtn.style.display = 'block';
         modalPrevBtn.style.display = 'block';
-        modalCounter.textContent = `${modalCount}/${screenshots.length}`;
     });
 });
 
@@ -283,8 +283,8 @@ function showNextImg(){
         modalCount = 1;
     }
     modalCounter.style.opacity = '1';
-    modal.lastElementChild.firstElementChild.setAttribute('src',`./img/${modalCount}.jpg`);
     modalCounter.textContent = `${modalCount}/${screenshots.length}`;
+    modal.lastElementChild.firstElementChild.setAttribute('src',`./img/${modalCount}.jpg`);
 
 }
 //modal for videos
