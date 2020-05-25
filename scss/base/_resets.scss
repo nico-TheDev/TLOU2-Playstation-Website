@@ -16,8 +16,8 @@ $gray-bg:#1b1b1b;
 html{
     box-sizing: border-box;
     font-size: calc(1vh + 0.5vw);
-
-    @include query(cp){
+    scroll-behavior: smooth;
+    @include query(cp){ 
         font-size: 13px;
     }
 }
