@@ -49,6 +49,10 @@
         height: 4rem;
         right: 2rem;
         display: none;
+
+        @include query(cp){
+            top: 60%;
+        }
     }
 }
 
@@ -63,5 +67,9 @@
         height: 4rem;
         left: 2rem;
         display: none;
+
+        @include query(cp){
+            top: 60%;
+        }
     }
 }

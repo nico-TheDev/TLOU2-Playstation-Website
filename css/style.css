@@ -1090,6 +1090,12 @@ svg {
   display: none;
 }
 
+@media only screen and (max-width: 700px) {
+  .next--3 {
+    top: 60%;
+  }
+}
+
 .prev {
   left: -4rem;
 }
@@ -1105,6 +1111,12 @@ svg {
   height: 4rem;
   left: 2rem;
   display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .prev--3 {
+    top: 60%;
+  }
 }
 
 .expand {
@@ -1214,7 +1226,6 @@ svg {
 .modal {
   position: fixed;
   width: 100%;
-  height: 100vh;
   background-color: #7c7e78;
   z-index: 1000;
   -webkit-transform: scale(0);
@@ -1251,8 +1262,9 @@ svg {
 
 .modal__cover {
   width: 80%;
-  height: 100%;
+  height: 92vh;
   margin: 0 auto;
+  position: relative;
 }
 
 .modal__img {
@@ -1262,6 +1274,26 @@ svg {
      object-fit: cover;
   display: block;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 900px) {
+  .modal__img {
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+.importedVid {
+  width: 100%;
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .showNavi {

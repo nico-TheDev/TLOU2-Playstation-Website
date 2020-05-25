@@ -212,8 +212,11 @@ const modalImg = document.querySelector('.modal__img');
 const modalNextBtn = document.querySelector('.next--3');
 const modalPrevBtn = document.querySelector('.prev--3');
 let modalCount;
+const ytVid = document.querySelector('iframe');
+
 modalCloseBtn.addEventListener('click',()=>{
     modal.classList.remove('showModal');
+    ytVid.style.display = 'none';
 });
 
 wallpapers.addEventListener('click',showModal);
@@ -221,7 +224,7 @@ wallpapers.addEventListener('click',showModal);
 function showModal(e){
     console.log(e.target);
     console.log(e.target.parentElement);
-
+    modalImg.style.display = 'block';
     modalNextBtn.style.display = 'none';
     modalPrevBtn.style.display = 'none';
 
@@ -245,11 +248,13 @@ function showModal(e){
 const modalCounter = document.querySelector('.modal__counter');
 screenshots.forEach((shot,index)=>{
     shot.addEventListener('click',function(){
+        modalImg.style.display = 'block';
         modalCount = index + 1;
         modal.classList.add('showModal');
         modal.lastElementChild.firstElementChild.setAttribute('src',`./img/${modalCount}.jpg`);
         modalNextBtn.style.display = 'block';
         modalPrevBtn.style.display = 'block';
+        modalCounter.textContent = `${modalCount}/${screenshots.length}`;
     });
 });
 
@@ -280,3 +285,28 @@ function showNextImg(){
 
 }
 //modal for videos
+
+const trailers = document.querySelectorAll('.trailer');
+const modalCover = document.querySelector('.modal__cover');
+ytVid.style.display = 'none';
+trailers.forEach((trailer,index)=>{
+    trailer.addEventListener('click',function(){
+        let videoSrc;
+        modalImg.style.display = 'none';
+        ytVid.style.display = 'block';
+        modal.classList.add('showModal');
+
+        if(index === 0){
+            videoSrc = 'https://www.youtube.com/embed/_nisfcYeQwY';
+        }
+        if(index === 1){
+            videoSrc = 'https://www.youtube.com/embed/eIO4VTx-6uo';
+        }
+        if(index === 2){
+            videoSrc = 'https://www.youtube.com/embed/tU8BRn32wwM';
+        }
+
+        ytVid.setAttribute('src',videoSrc);
+        ytVid.className = 'importedVid';
+    });
+});
