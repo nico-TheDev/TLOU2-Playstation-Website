@@ -63,6 +63,10 @@ section {
   height: 3rem;
 }
 
+svg {
+  pointer-events: none;
+}
+
 .u-py-1 {
   padding: 2rem 0;
 }
@@ -1079,6 +1083,13 @@ section {
   }
 }
 
+.next--3 {
+  width: 4rem;
+  height: 4rem;
+  right: 2rem;
+  display: none;
+}
+
 .prev {
   left: -4rem;
 }
@@ -1087,6 +1098,13 @@ section {
   .prev {
     left: 0rem;
   }
+}
+
+.prev--3 {
+  width: 4rem;
+  height: 4rem;
+  left: 2rem;
+  display: none;
 }
 
 .expand {
@@ -1201,6 +1219,8 @@ section {
   z-index: 1000;
   -webkit-transform: scale(0);
           transform: scale(0);
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 
 .modal__nav {
@@ -1208,14 +1228,15 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 0 2rem;
   background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal__counter {
+  margin-right: auto;
 }
 
 .modal button {
@@ -1235,7 +1256,7 @@ section {
 }
 
 .modal__img {
-  width: auto;
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1267,5 +1288,10 @@ section {
 
 .showScreenshot {
   display: block !important;
+}
+
+.showModal {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 /*# sourceMappingURL=style.css.map */

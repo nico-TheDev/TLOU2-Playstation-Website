@@ -18,6 +18,8 @@ window.onscroll = function() {
         naviLogo.classList.remove('showNaviLogo');
     }
 
+
+
 }
 
 // Slide in nav overlay
@@ -176,6 +178,8 @@ if(mq){
 // show screenshots
 const showScreenshotBtn =  document.querySelector('.screenshots__btn');
 const screenshots = document.querySelectorAll('.collection__cover');
+const screenshotBtnOffset = showScreenshotBtn.getBoundingClientRect();
+let btnTopOffset = screenshotBtnOffset.top;
 
 showScreenshotBtn.addEventListener('click',showScreenshots);
 
@@ -197,7 +201,82 @@ function showScreenshots(){
     }
 }
 
-
 //modal for wallpapers
+const wallpapers = document.querySelector('.gallery');
+const modal = document.querySelector('.modal');
+
+// modal btn
+
+const modalCloseBtn = document.querySelector('.close');
+const modalImg = document.querySelector('.modal__img');
+const modalNextBtn = document.querySelector('.next--3');
+const modalPrevBtn = document.querySelector('.prev--3');
+let modalCount;
+modalCloseBtn.addEventListener('click',()=>{
+    modal.classList.remove('showModal');
+});
+
+wallpapers.addEventListener('click',showModal);
+
+function showModal(e){
+    console.log(e.target);
+    console.log(e.target.parentElement);
+
+    modalNextBtn.style.display = 'none';
+    modalPrevBtn.style.display = 'none';
+
+    if(e.target.parentElement.className.includes('cover')){
+        console.log('showModal');
+        modal.classList.add('showModal');
+        let target = e.target.src;
+        if(target.includes('wp-2') || target.includes('wp-3')){
+            modalImg.style.width = 'auto';
+            console.log(target);
+        }else{
+            modalImg.style.width = '100%';
+        }
+        modal.lastElementChild.firstElementChild.setAttribute('src',target);
+    }
+
+}
+
+
 //modal for images
+const modalCounter = document.querySelector('.modal__counter');
+screenshots.forEach((shot,index)=>{
+    shot.addEventListener('click',function(){
+        modalCount = index + 1;
+        modal.classList.add('showModal');
+        modal.lastElementChild.firstElementChild.setAttribute('src',`./img/${modalCount}.jpg`);
+        modalNextBtn.style.display = 'block';
+        modalPrevBtn.style.display = 'block';
+    });
+});
+
+
+modalNextBtn.addEventListener('click',function(){
+    modalCount++;
+    showNextImg();
+});
+
+modalPrevBtn.addEventListener('click',function(){
+    modalCount--;
+    showNextImg();
+});
+
+
+
+
+function showNextImg(){
+    if(modalCount <= 0){
+        modalCount = screenshots.length;
+    }
+    else if(modalCount === screenshots.length + 1){
+        modalCount = 1;
+    }
+
+    modal.lastElementChild.firstElementChild.setAttribute('src',`./img/${modalCount}.jpg`);
+    modalCounter.textContent = `${modalCount}/${screenshots.length}`;
+
+}
 //modal for videos
