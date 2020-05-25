@@ -39,7 +39,7 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-areas: repeat(4,auto);
-
+    grid-auto-flow: dense;
     @include query(cp){
         grid-template-columns: 1fr;
     }
@@ -53,22 +53,6 @@
             transform: scale(1.2);
         }
 
-        &:first-child{
-            grid-column: span 2;
-            grid-row:span 2;
-            @include query(cp){
-                grid-column: span 1;
-                grid-row: span 1;
-            }
-        }
-        &:last-child{
-            grid-column: 2/span 2;
-            grid-row:3 /span 2;
-            @include query(cp){
-                grid-column: span 1;
-                grid-row: span 1;
-            }
-        }
 
         &:nth-child(even){
             @include query(cp){
@@ -88,5 +72,22 @@
 .screenshots .container .desc{
     @include query(cp){
         font-size: 1rem;
+    }
+}
+
+.st-left{
+    grid-column: span 2;
+    grid-row:span 2;
+    @include query(cp){
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+.st-right{
+    grid-column: 2/span 2;
+    grid-row:3 /span 2;
+    @include query(cp){
+        grid-column: span 1;
+        grid-row: span 1;
     }
 }

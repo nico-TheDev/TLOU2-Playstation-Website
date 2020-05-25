@@ -172,5 +172,32 @@ if(mq){
 
  
 }
+
+// show screenshots
+const showScreenshotBtn =  document.querySelector('.screenshots__btn');
+const screenshots = document.querySelectorAll('.collection__cover');
+
+showScreenshotBtn.addEventListener('click',showScreenshots);
+
+for(let i = 6; i < screenshots.length;i++){
+    screenshots[i].style.display = 'none';
+}
+
+function showScreenshots(){
+    for(let i = 6; i < screenshots.length;i++){
+        screenshots[i].classList.toggle('showScreenshot');
+    }
+
+    if(screenshots[8].classList.contains('showScreenshot')){
+        showScreenshotBtn.firstChild.textContent = 'Close gallery';
+        showScreenshotBtn.firstElementChild.firstElementChild.setAttribute('href','./img/sprites.svg#icon-cheveron-up')
+    }else{
+        showScreenshotBtn.firstChild.textContent = 'Show all 30 screenshots';
+        showScreenshotBtn.firstElementChild.firstElementChild.setAttribute('href','./img/sprites.svg#icon-cheveron-down')
+    }
+}
+
+
+//modal for wallpapers
 //modal for images
 //modal for videos
