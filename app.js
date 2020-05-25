@@ -29,13 +29,14 @@ const navBtn = document.querySelector('.menu');
 navBtn.addEventListener('click',()=>{
     navOverlay.classList.toggle('slideInOverlay');
     navi.classList.remove('showNavi');
+    naviLogo.classList.add('showNaviLogo');
 
     if(naviLogo.classList.contains('showNaviLogo')){
-        naviLogo.classList.remove('showNaviLogo');
         navBtn.firstElementChild.firstElementChild.setAttribute('href','./img/sprites.svg#icon-menu');
     }
     else{
         naviLogo.classList.add('showNaviLogo');
+        naviLogo.classList.add('showNavi');
         navBtn.firstElementChild.firstElementChild.setAttribute('href','./img/sprites.svg#icon-close');
     }
 });
@@ -213,6 +214,7 @@ const modalNextBtn = document.querySelector('.next--3');
 const modalPrevBtn = document.querySelector('.prev--3');
 let modalCount;
 const ytVid = document.querySelector('iframe');
+const modalCounter = document.querySelector('.modal__counter');
 
 modalCloseBtn.addEventListener('click',()=>{
     modal.classList.remove('showModal');
@@ -227,6 +229,7 @@ function showModal(e){
     modalImg.style.display = 'block';
     modalNextBtn.style.display = 'none';
     modalPrevBtn.style.display = 'none';
+    modalCounter.style.opacity = '0';
 
     if(e.target.parentElement.className.includes('cover')){
         console.log('showModal');
@@ -245,9 +248,9 @@ function showModal(e){
 
 
 //modal for images
-const modalCounter = document.querySelector('.modal__counter');
 screenshots.forEach((shot,index)=>{
     shot.addEventListener('click',function(){
+        modalCounter.style.opacity = '1';
         modalImg.style.display = 'block';
         modalCount = index + 1;
         modal.classList.add('showModal');
@@ -279,7 +282,7 @@ function showNextImg(){
     else if(modalCount === screenshots.length + 1){
         modalCount = 1;
     }
-
+    modalCounter.style.opacity = '1';
     modal.lastElementChild.firstElementChild.setAttribute('src',`./img/${modalCount}.jpg`);
     modalCounter.textContent = `${modalCount}/${screenshots.length}`;
 
@@ -291,6 +294,7 @@ const modalCover = document.querySelector('.modal__cover');
 ytVid.style.display = 'none';
 trailers.forEach((trailer,index)=>{
     trailer.addEventListener('click',function(){
+        modalCounter.style.opacity = '0';
         let videoSrc;
         modalImg.style.display = 'none';
         ytVid.style.display = 'block';
