@@ -30,13 +30,24 @@
     position: absolute;
     top: 50%;
     transform:translateY(-50%);
+
+    @include query(cp){
+        top: 12%;
+        z-index: 10;
+    }
 }
 
 
 .next{
     right: -4rem;
+    @include query(cp){
+        right: 0;
+    }
 }
 
 .prev{
     left: -4rem;
+    @include query(cp){
+        left: 0rem;
+    }
 }

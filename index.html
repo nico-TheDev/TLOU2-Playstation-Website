@@ -17,8 +17,19 @@
                 <li class="nav__item"><a href="#" class="nav__link">ABOUT</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">MEDIA</a></li>
             </ul>
+
+            <button class="menu">
+                <svg class="icon">
+                    <use href="./img/sprites.svg#icon-menu"></use>
+                </svg>
+            </button>
         </div>
+
     </nav>
+            <div class="nav__overlay">
+                <li class="nav__item"><a href="#" class="nav__link">ABOUT</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">MEDIA</a></li>
+            </div>
 
     <header class="header">
         <video class='header__vid' autoplay muted loop>
@@ -58,12 +69,14 @@
 
         <div class="container">
             <h2 class="title u-mb-2">Choose your edition</h2>
-            <ul class="edition__list u-mb-3">
-                <li class="edition__item pickedEdition">Ellie edition</li>
-                <li class="edition__item">Collector's edition</li>
-                <li class="edition__item">special edition</li>
-                <li class="edition__item">standard editions</li>
-            </ul>
+            <div class="edition-list-container">
+                <ul class="edition__list u-mb-3">
+                    <li class="edition__item pickedEdition">Ellie edition</li>
+                    <li class="edition__item">Collector's edition</li>
+                    <li class="edition__item">special edition</li>
+                    <li class="edition__item">standard editions</li>
+                </ul>
+            </div>
 
             
             <div class="slider">
@@ -169,10 +182,28 @@
     </section>
 
     <section class="story u-py-2">
-        <h2 class="title u- u-mb-3">A ground breaking experience</h2>
-
+        
         <div class="container">
-            <div class="story__slider">       
+            <h2 class="title u- u-mb-3 u-centered">A ground breaking experience</h2>
+
+            <div class="story__indicator">
+                <button class="story__dot currentDot"></button>
+                <button class="story__dot"></button>
+                <button class="story__dot"></button>
+            </div>
+            <button class="slider-btn next next--2">
+                <svg class="icon">
+                    <use href="./img/sprites.svg#icon-cheveron-right"></use>
+                </svg>
+            </button>
+            <button class="slider-btn prev prev--2">
+                <svg class="icon">
+                    <use href="./img/sprites.svg#icon-cheveron-left"></use>
+                </svg>
+            </button>
+            <div class="story__slider">
+                
+
                 <div class="story__item">
                     <div class="story__cover">
                         <img src="./img/story-1.jpg" alt="story photo" class="story__img">
@@ -369,7 +400,7 @@
                             <use xlink:href="./img/sprites.svg#icon-youtube"></use>
                         </svg>
                     </div>
-                    <p class="desc">The Last of Us Part II - Official Story Trailer | PS4
+                    <p class="desc">The Last of Us Part II - Inside the Story | PS4
                     </p>
                 </div>
                 <div class="trailer">
@@ -379,7 +410,7 @@
                             <use xlink:href="./img/sprites.svg#icon-youtube"></use>
                         </svg>
                     </div>
-                    <p class="desc">The Last of Us Part II - Official Story Trailer | PS4
+                    <p class="desc">The Last of Us Part II - Gameplay Trailer | PS4
                     </p>
                 </div>
         
@@ -392,7 +423,7 @@
                 <img src="./img/logo.png" alt="" class="logo__img">
             </a>
 
-            <p class="desc u-centered">
+            <p class="desc u-centered note">
                 ©Sony Interactive Entertainment LLC. Created and developed by Naughty Dog, LLC.
             </p>
         </div>

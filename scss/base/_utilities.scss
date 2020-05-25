@@ -22,8 +22,16 @@
 //COntainer
 
 .container{
-    max-width: 900px;
+    max-width: 65%;
     margin: 0 auto;
+
+    @include query(tabp){
+        max-width: 70%;
+    }
+
+    @include query(cp){
+        max-width: 90%;
+    }
 }
 
 // center
@@ -55,6 +63,11 @@
     padding-bottom: 0.2rem;
     text-transform: uppercase;
     display: inline-block;
+
+    @include query(cp){
+        font-size: 2.3rem;
+    }
+    
 }
 
 .title-2{

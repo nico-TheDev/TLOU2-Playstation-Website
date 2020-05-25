@@ -1,6 +1,6 @@
 .intro{
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
 
     &::before{
         content:'';
@@ -29,6 +29,19 @@
         right: 0;
         width: 60%;
 
+        @include query(tabp){
+            position: static;
+            width: 100%;
+            height: 85vh;
+        }
+
+        @include query(cp){
+            height: 65vh;
+        }
+        @include query(scp){
+            height: 35vh;
+        }
+
         &::before{
             content: '';
             width: 20%;
@@ -44,11 +57,22 @@
         width: 100%;
         height: 100%;
         display: block;
+
+        @include query(tabp){
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: auto;
+        }
     }
 
     &__text{
         position: relative;
         width: 40%;
+        
+        @include query(tabp){
+            width: 100%;
+        }
     }
 
     .desc{

@@ -32,6 +32,14 @@
         width: 15rem;
         height: auto;
         object-position: left;
+
+        @include query(tabp){
+            width:20rem;
+        }
+
+        @include query(cp){
+            width:15rem;
+        }
     }
 
     &__date{

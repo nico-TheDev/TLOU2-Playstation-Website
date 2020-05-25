@@ -5,6 +5,10 @@
     .desc{
         width: 85%;
         margin:0 auto;
+
+        @include query(cp){
+            width: 95%;
+        }
     }
 
 }
@@ -14,6 +18,11 @@
     grid-template-columns: repeat(4,1fr);
     grid-gap: 1rem;
     align-items: center;
+
+    @include query(cp){
+        grid-template-columns: 1fr;
+        grid-gap: 4rem;
+    }
 
     &__item{
         cursor: pointer;

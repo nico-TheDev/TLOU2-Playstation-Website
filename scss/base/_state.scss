@@ -11,3 +11,11 @@
     border-color: $main;
     color: white;
 }
+
+.slideInOverlay{
+    transform: translateX(0);
+}
+
+.currentDot{
+    background-color: $main;
+}

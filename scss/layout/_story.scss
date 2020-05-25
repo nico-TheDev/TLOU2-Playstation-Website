@@ -1,15 +1,33 @@
 .story{
 
+    .container{
+        position: relative;
+    }
+
     .title{
         position: relative;
         left: 50%;
         transform: translateX(-50%);
+
+        @include query(scp){
+            left: 0;
+            transform: translateX(0);
+            position: static;
+            text-align: left;
+        }
     }
 
     &__slider{
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-gap: 2rem;
+        position: relative;
+
+        @include query(tabp){
+            grid-template-columns: 1fr;
+            height: 70vh;
+            overflow: hidden;
+        }
     }
 
     &__cover{
@@ -31,5 +49,38 @@
         display: block;
         object-fit: cover;
         transition: 300ms;
+    }
+
+    &__item{
+        @include query(tabp){
+            width: 100%;
+            position: absolute;
+            transition: 500ms;
+        }
+    }
+
+    button{
+        display: none;
+
+        @include query(tabp){
+            display: block;
+        }
+
+        @include query(cp){
+            top: 40%;
+        }
+    }
+
+    &__indicator{
+        display: flex;
+        margin-bottom: 1rem;
+    }
+
+    &__dot{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: darken($main,30%);
+        margin-right: 5px;
     }
 }

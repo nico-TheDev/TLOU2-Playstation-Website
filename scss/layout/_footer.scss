@@ -10,15 +10,20 @@
 
     &__logo{
         margin-right: 1rem;
+
+        @include query(cp){
+            display: none;
+        }
     }
 
     &__list{
         display: inline-flex;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     &__item{
-
+        margin-bottom: 1rem;
         &::after{
             content: '';
             height: 16px;
@@ -26,13 +31,22 @@
             background-color: skyblue;
             display: inline-block;
             margin: 0 0.5rem;
+
+            @include query(cp){
+                vertical-align: middle;
+            }
         }
     }
 
     &__link{
         font-size: 1.1rem;
+        font-weight: bold;
         &:hover{
             color: skyblue;
+        }
+
+        @include query(cp){
+            font-weight: 300;
         }
     }
 
@@ -63,7 +77,18 @@
         }
     }
 
+    .sony{
+        @include query(cp){
+            display: none;
+        }
+    }
+
     .desc{
         padding: 0 2%;
+
+        @include query(cp){
+            font-size: 1rem;
+            text-align: center;
+        }
     }
 }

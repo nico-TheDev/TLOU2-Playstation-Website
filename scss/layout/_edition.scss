@@ -4,8 +4,20 @@
     background-position: center;
     background-size: cover;
 
+    @include query(tabp){
+        background-image: none;
+    }
+
     &__list{
         display: flex;
+        transition: 300ms;
+
+        @include query(cp){
+            height: 6vh;
+            position: relative;
+            display: inline-flex;
+
+        }
     }
 
     &__item{
@@ -17,6 +29,13 @@
         cursor: pointer;
         border-bottom: 4px solid transparent;
         padding-bottom: 3px;
+
+        @include query(cp){
+            display: inline-block;
+            width: max-content;
+        }
+       
+
         &:hover{
             color: white;
         }
@@ -31,6 +50,10 @@
         height: 85vh;
         width: 100%;
         overflow: hidden;
+
+        @include query(tabp){
+            height: 100vh;
+        }
     }
 
     &__slide{
@@ -47,6 +70,17 @@
         ;
         cursor: grab;
         transition: 500ms ease-in;
+
+        @include query(tabp){
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr;
+            grid-gap: 2rem;
+            grid-template-areas: 
+            "cover"
+            "cont"
+            "list"
+            ;
+        }
     }
     
     &__img{
@@ -69,6 +103,10 @@
         grid-area: list;
         height: 80vh;
         overflow-y: scroll;
+
+        @include query(tabp){
+            height: 50vh;
+        }
         
         & > *:not(:last-child){
             margin-bottom: 1rem;
@@ -107,4 +145,8 @@
         }
     }
     
+
+    &-list-container{
+        overflow: hidden;
+    }
 }

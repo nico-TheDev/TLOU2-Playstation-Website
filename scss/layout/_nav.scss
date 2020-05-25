@@ -7,12 +7,17 @@
     background-color: transparent;
     z-index: 100;
     transition: 300ms ease;
+    overflow: hidden;
 
     .container{
         height: 12vh;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include query(cp){
+            padding: 2rem;
+        }
     }
     &__logo{
         width: 8rem;
@@ -23,6 +28,10 @@
 
     &__list{
         display: flex;
+
+        @include query(cp){
+            display: none;
+        }
     }
 
     &__link{
@@ -33,6 +42,47 @@
         font-family: 'Oswald',sans-serif;
         &:hover{
             color: $main;
+        }
+    }
+
+    .menu{
+        display: none;
+
+        .icon{
+            fill:$gray;
+            width: 2rem;
+        }
+        @include query(cp){
+            display: block;
+        }
+    }
+
+
+
+
+    &__overlay{
+        position: fixed;
+        height: 100vh;
+        background-color: rgba(black,0.9);
+        width: 100%;
+        top: 0;
+        left:0;
+        display: grid;
+        justify-items: center;
+        align-items: start;
+        align-content:start;
+        padding-top: 12vh;
+        transform: translateX(-100%);
+        transition: 500ms;
+        text-align: center;
+        z-index: 99;
+        .nav__link{
+            color: $main;
+            text-align: center;
+            margin:0;
+        }
+
+        .nav__item{
         }
     }
 }

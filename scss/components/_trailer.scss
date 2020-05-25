@@ -17,19 +17,35 @@
         height: auto;
         margin: 1rem auto;
         display: block;
+
+        @include query(cp){
+            width: 100%;
+        }
     }
 
     .icon{
         @include absoluteCenter;
         width: 7rem;
         height: 7rem;
+        transition: 300ms;
+
+        @include query(cp){
+            width: 4rem;
+            height: 4rem;
+        }
     }
+
+
 }
 
 .mini-trailer{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 1rem;
+
+    @include query(cp){
+        grid-template-columns: 1fr;
+    }
 
     .trailer{
         &__img{

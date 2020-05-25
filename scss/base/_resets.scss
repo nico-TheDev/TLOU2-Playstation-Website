@@ -16,6 +16,10 @@ $gray-bg:#1b1b1b;
 html{
     box-sizing: border-box;
     font-size: calc(1vh + 0.5vw);
+
+    @include query(cp){
+        font-size: 13px;
+    }
 }
 
 body{
@@ -23,6 +27,9 @@ body{
     line-height: 1.5;
     color: white;
     font-size: 1.3rem;
+    position: relative;
+
+
 }
 
 
