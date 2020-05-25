@@ -1,72 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
-$gray:#7c7e78;
-$main:#fec107;
-$gray-bg:#1b1b1b;
+$gray: #7c7e78;
+$main: #fec107;
+$gray-bg: #1b1b1b;
 
 *,
 *::before,
-*::after{
+*::after {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
 }
 
-html{
+html {
     box-sizing: border-box;
     font-size: calc(1vh + 0.5vw);
     scroll-behavior: smooth;
-    @include query(cp){ 
+    @include query(cp) {
         font-size: 13px;
     }
 }
 
-body{
-    font-family: 'Lato',sans-serif;
+body {
+    font-family: "Lato", sans-serif;
     line-height: 1.5;
     color: white;
     font-size: 1.3rem;
     position: relative;
-
-
 }
 
-
-h1,h2,h3,h4,h5{
-    font-family: 'Oswald',sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Oswald", sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-li{
+li {
     list-style: none;
 }
 
-button{
+button {
     font-size: inherit;
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-input{
+input {
     font-size: inherit;
     font-family: inherit;
 }
 
-section{
+section {
     background-color: black;
 }
 
-.icon{
+.icon {
     width: 3rem;
     height: 3rem;
 }
 
-svg{
+svg {
     pointer-events: none;
 }

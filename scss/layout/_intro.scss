@@ -1,64 +1,79 @@
-.intro{
+.intro {
     position: relative;
     min-height: 100vh;
 
-    &::before{
-        content:'';
+    &::before {
+        content: "";
         width: 100%;
         height: 10vh;
         position: absolute;
-        background-image: linear-gradient(to bottom,black,rgba(black,0.8),transparent);
+        background-image: linear-gradient(
+            to bottom,
+            black,
+            rgba(black, 0.8),
+            transparent
+        );
         z-index: 2;
         left: 0;
         top: 0;
     }
-      &::after{
-        content:'';
+    &::after {
+        content: "";
         width: 100%;
         height: 10vh;
         position: absolute;
-        background-image: linear-gradient(to top,black,rgba(black,0.8),transparent);
+        background-image: linear-gradient(
+            to top,
+            black,
+            rgba(black, 0.8),
+            transparent
+        );
         z-index: 2;
         left: 0;
         bottom: 0;
     }
 
-    &__cover{
+    &__cover {
         position: absolute;
         top: 0;
         right: 0;
         width: 60%;
 
-        @include query(tabp){
+        @include query(tabp) {
             position: static;
             width: 100%;
             height: 85vh;
         }
 
-        @include query(cp){
+        @include query(cp) {
             height: 65vh;
         }
-        @include query(scp){
+        @include query(scp) {
             height: 35vh;
         }
 
-        &::before{
-            content: '';
+        &::before {
+            content: "";
             width: 20%;
             height: 100%;
-            background-image: linear-gradient(to right,black,rgba(black,0.8),transparent);
+            background-image: linear-gradient(
+                to right,
+                black,
+                rgba(black, 0.8),
+                transparent
+            );
             position: absolute;
             top: 0;
             left: 0;
         }
     }
 
-    &__img{
+    &__img {
         width: 100%;
         height: 100%;
         display: block;
 
-        @include query(tabp){
+        @include query(tabp) {
             position: absolute;
             top: 0;
             left: 0;
@@ -66,16 +81,16 @@
         }
     }
 
-    &__text{
+    &__text {
         position: relative;
         width: 40%;
-        
-        @include query(tabp){
+
+        @include query(tabp) {
             width: 100%;
         }
     }
 
-    .desc{
+    .desc {
         width: 95%;
     }
 }

@@ -1,28 +1,27 @@
-.edition{
+.edition {
     position: relative;
     background-image: url(/img/bg-1.jpg);
     background-position: center;
     background-size: cover;
 
-    @include query(tabp){
+    @include query(tabp) {
         background-image: none;
     }
 
-    &__list{
+    &__list {
         display: flex;
         transition: 300ms;
 
-        @include query(cp){
+        @include query(cp) {
             height: 6vh;
             position: relative;
             display: inline-flex;
-
         }
     }
 
-    &__item{
+    &__item {
         text-transform: uppercase;
-        font-family: 'Oswald',sans-serif;
+        font-family: "Oswald", sans-serif;
         margin-right: 2rem;
         color: $gray;
         font-weight: bold;
@@ -30,33 +29,32 @@
         border-bottom: 4px solid transparent;
         padding-bottom: 3px;
 
-        @include query(cp){
+        @include query(cp) {
             display: inline-block;
             width: max-content;
         }
-       
 
-        &:hover{
+        &:hover {
             color: white;
         }
     }
 
-    .slider{
+    .slider {
         position: relative;
     }
 
-    &__slider{
+    &__slider {
         position: relative;
         height: 85vh;
         width: 100%;
         overflow: hidden;
 
-        @include query(tabp){
+        @include query(tabp) {
             height: 100vh;
         }
     }
 
-    &__slide{
+    &__slide {
         position: absolute;
         width: 100%;
         height: max-content;
@@ -64,89 +62,82 @@
         grid-template-columns: 2fr 1fr;
         grid-template-rows: auto 1fr;
         grid-gap: 2rem;
-        grid-template-areas: 
-        ". cont"
-        "cover list"
-        ;
+        grid-template-areas:
+            ". cont"
+            "cover list";
         cursor: grab;
         transition: 500ms ease-in;
 
-        @include query(tabp){
+        @include query(tabp) {
             grid-template-columns: 1fr;
             grid-template-rows: auto 1fr;
             grid-gap: 2rem;
-            grid-template-areas: 
-            "cover"
-            "cont"
-            "list"
-            ;
+            grid-template-areas:
+                "cover"
+                "cont"
+                "list";
         }
     }
-    
-    &__img{
+
+    &__img {
         width: 100%;
         height: 100%;
         display: block;
     }
-    
-    
-    &__text{
+
+    &__text {
         grid-area: cont;
     }
 
-    &__cover{
+    &__cover {
         grid-area: cover;
         margin-bottom: 10vh;
     }
 
-    &__features{
+    &__features {
         grid-area: list;
         height: 80vh;
         overflow-y: scroll;
 
-        @include query(tabp){
+        @include query(tabp) {
             height: 50vh;
         }
-        
-        & > *:not(:last-child){
+
+        & > *:not(:last-child) {
             margin-bottom: 1rem;
-            
         }
-        
-        &::-webkit-scrollbar{
+
+        &::-webkit-scrollbar {
             width: 4px;
         }
-        &::-webkit-scrollbar-track{
-            
-            background-color: rgba(black,0.5);
+        &::-webkit-scrollbar-track {
+            background-color: rgba(black, 0.5);
         }
-        
-        &::-webkit-scrollbar-thumb{
+
+        &::-webkit-scrollbar-thumb {
             background-color: $main;
         }
-        
     }
-    
-    &__feature-item{
-        display:flex;
+
+    &__feature-item {
+        display: flex;
         align-items: center;
         color: white;
-        &::before{
-            content: '';
+        &::before {
+            content: "";
             width: 8px;
             height: 8px;
             background-color: $main;
             display: inline-block;
             margin-right: 1rem;
         }
-        
-        &::selection{
+
+        &::selection {
             background-color: transparent;
         }
     }
-    
 
-    &-list-container{
+    &-list-container {
         overflow: hidden;
     }
 }

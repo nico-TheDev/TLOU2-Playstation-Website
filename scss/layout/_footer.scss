@@ -1,92 +1,92 @@
-.footer{
+.footer {
     background-color: hsl(0, 0%, 20%);
 
-    &__head{
+    &__head {
         border-bottom: 1px solid white;
         display: flex;
         align-items: center;
         padding: 1rem 2%;
     }
 
-    &__logo{
+    &__logo {
         margin-right: 1rem;
 
-        @include query(cp){
+        @include query(cp) {
             display: none;
         }
     }
 
-    &__list{
+    &__list {
         display: inline-flex;
         align-items: center;
         flex-wrap: wrap;
     }
 
-    &__item{
+    &__item {
         margin-bottom: 1rem;
-        &::after{
-            content: '';
+        &::after {
+            content: "";
             height: 16px;
             width: 2px;
             background-color: skyblue;
             display: inline-block;
             margin: 0 0.5rem;
 
-            @include query(cp){
+            @include query(cp) {
                 vertical-align: middle;
             }
         }
     }
 
-    &__link{
+    &__link {
         font-size: 1.1rem;
         font-weight: bold;
-        &:hover{
+        &:hover {
             color: skyblue;
         }
 
-        @include query(cp){
+        @include query(cp) {
             font-weight: 300;
         }
     }
 
-    &__bottom{
+    &__bottom {
         padding: 2rem 2%;
     }
 
-    .country{
+    .country {
         margin-right: 2rem;
     }
 
     .country,
-    .sony{
+    .sony {
         display: inline-flex;
         align-items: center;
         text-transform: uppercase;
         font-weight: bold;
 
-        &:hover{
+        &:hover {
             color: skyblue;
         }
 
-        .icon{
-            fill:white;
+        .icon {
+            fill: white;
             margin-right: 1rem;
-            width:2rem;
+            width: 2rem;
             height: 2rem;
         }
     }
 
-    .sony{
-        @include query(cp){
+    .sony {
+        @include query(cp) {
             display: none;
         }
     }
 
-    .desc{
+    .desc {
         padding: 0 2%;
 
-        @include query(cp){
+        @include query(cp) {
             font-size: 1rem;
             text-align: center;
         }

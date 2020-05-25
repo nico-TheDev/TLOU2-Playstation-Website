@@ -1,747 +1,1094 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Last of us Part II Game | PS4</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>The Last of us Part II Game | PS4</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <script src="app.js" defer></script>
-</head>
-<body>
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <!-- MODAL -->
 
-    <!-- MODAL -->
-
-    <div class="modal">
-
-        <button class="slider-btn next next--3">
-            <svg class="icon">
-                <use href="./img/sprites.svg#icon-cheveron-right"></use>
-            </svg>
-        </button>
-        <button class="slider-btn prev prev--3">
-            <svg class="icon">
-                <use href="./img/sprites.svg#icon-cheveron-left"></use>
-            </svg>
-        </button>
-
-        <nav class="modal__nav">
-            <span class="modal__counter">1/30</span>
-            <button class="zoom-out">
-                <svg class="icon">
-                    <use xlink:href='./img/sprites.svg#icon-zoom-out'></use>
-                </svg>
-            </button>
-            <button class="zoom-in">
-                <svg class="icon">
-                    <use xlink:href='./img/sprites.svg#icon-zoom-in'></use>
-                </svg>
-            </button>
-            <button class="fullscreen">
-                <svg class="icon">
-                    <use xlink:href='./img/sprites.svg#icon-fullscreen'></use>
-                </svg>
-            </button>
-            <button class="close">
-                <svg class="icon">
-                    <use xlink:href='./img/sprites.svg#icon-clear'></use>
-                </svg>
-            </button>
-        </nav>
-
-        <div class="modal__cover">
-            <img src="./img/wp-1.jpg" alt="modal photo" class="modal__img">
-            <iframe src="https://www.youtube.com/embed/ddIr0VngnaU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
-        </div>
-    </div>
-
-    <!-- MODAL -->
-
-    <nav class="nav">
-        <div class="container">
-            <img src="./img/nav-logo.png" alt="logo-navi" class="nav__logo">
-
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#about" class="nav__link">ABOUT</a></li>
-                <li class="nav__item"><a href="#media" class="nav__link">MEDIA</a></li>
-            </ul>
-
-            <button class="menu">
-                <svg class="icon">
-                    <use href="./img/sprites.svg#icon-menu"></use>
-                </svg>
-            </button>
-        </div>
-
-    </nav>
-            <div class="nav__overlay">
-                <li class="nav__item"><a href="#" class="nav__link">ABOUT</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">MEDIA</a></li>
-            </div>
-
-    <header class="header">
-        <video class='header__vid' autoplay muted loop>
-            <source src="./img/showcasevid.mp4" type="video/mp4">
-                Not supported in  your browser
-        </video>
-        <div class="container">
-            <div class="header__hero">
-                <div class="header__logo">
-                    <img src="./img/big-logo.png" alt="logo" class="header__img">
-                </div>
-                <h2 class="header__date">Available 06.19.2020</h2>
-            </div>
-        </div>
-
-        <img src="./img/bottom-dark.png" alt="" class="bottom-dark">
-    </header>
-    <section id="about" class="intro u-py-5">
-        <div class="container">
-            <div class="intro__cover">
-                <img src="./img/ellie-mad.jpg" alt="ellie mad" class="intro__img">
-            </div>
-            <div class="intro__text">
-                <h2 class="title u-mb-2">THE LAST OF US PART II</h2>
-                <p class="desc u-mb-1">
-                    Five years after their dangerous journey across the post-pandemic United States, Ellie and Joel have settled down in Jackson, Wyoming. Living amongst a thriving community of survivors has allowed them peace and stability, despite the constant threat of the infected and other, more desperate survivors. 
-                </p>
-                <p class="desc">
-                    When a violent event disrupts that peace, Ellie embarks on a relentless journey to carry out justice and find closure. As she hunts those responsible one by one, she is confronted with the devastating physical and emotional repercussions of her actions. 
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="edition u-py-4">
-        <img src="./img/top-dark.png" alt="top-dark" class="top-dark">
-
-        <div class="container">
-            <h2 class="title u-mb-2">Choose your edition</h2>
-            <div class="edition-list-container">
-                <ul class="edition__list u-mb-3">
-                    <li class="edition__item pickedEdition">Ellie edition</li>
-                    <li class="edition__item">Collector's edition</li>
-                    <li class="edition__item">special edition</li>
-                    <li class="edition__item">standard editions</li>
-                </ul>
-            </div>
-
-            
-            <div class="slider">
-               
-                <button class="slider-btn next next--1">
-                    <svg class="icon">
-                        <use href="./img/sprites.svg#icon-cheveron-right"></use>
-                    </svg>
-                </button>
-                <button class="slider-btn prev prev--1">
-                    <svg class="icon">
-                        <use href="./img/sprites.svg#icon-cheveron-left"></use>
-                    </svg>
-                </button>
-
-
-                <div class="edition__slider">
-                    <div class="edition__slide">
-                        <div class="edition__text">
-                            <h3 class="title-2 u-mb-2">Ellie edition</h3>
-                            <a href="#" class="btn">where to buy disc</a>
-                        </div>
-                        <div class="edition__cover">
-                            <img src="./img/ellie-edtion.png" alt="editions" class="edition__img">
-                        </div>
-                        <ul class="edition__features">
-                            <li class="edition__feature-title">The Last of Us Part II Ellie Edition includes:</li>
-                            <li class="edition__feature-item">The Last of US Part II Logo Patch</li>
-                            <li class="edition__feature-item">7" Vinyl Record featuring Music from the Original Soundtrack</li>
-                            <li class="edition__feature-item">Replica of Ellie's Backpack</li>
-                            <li class="edition__feature-item">48 Page Mini Art Book from Dark Horse</li>
-                            <li class="edition__feature-item">Steelbook Case with Full Game</li>
-                            <li class="edition__feature-item">12" Ellie Statue</li>
-                            <li class="edition__feature-item">Lithography art Print and Thank You Letter</li>
-                            <li class="edition__feature-item">Replica of Ellie's Bracelet</li>
-                            <li class="edition__feature-item">Set of 6 Enamel Pins</li>
-                            <li class="edition__feature-item">Set of 5 Stickers</li>
-                            <li class="edition__feature-item">PS4 Dynamic Theme</li>
-                            <li class="edition__feature-item">Set of 6 PSN Avatars</li>
-                            <li class="edition__feature-item">Digital Soundtrack</li>
-                            <li class="edition__feature-item">Digital Mini Art Book from Dark Horse</li>
-                            <!-- <li class="edition__feature-title">Lorem ipsum dolor sit.</li> -->
-                        </ul>
-                    </div>
-                    <div class="edition__slide">
-                        <div class="edition__text">
-                            <h3 class="title-2 u-mb-2">Collector's edition</h3>
-                            <a href="#" class="btn">where to buy disc</a>
-                        </div>
-                        <div class="edition__cover">
-                            <img src="./img/collectors-edition.png" alt="editions" class="edition__img">
-                        </div>
-                        <ul class="edition__features">
-                            <li class="edition__feature-title">The Last of Us Part II Collector's Edition includes:</li>
-                            <li class="edition__feature-item">48 Page Mini Art Book from Dark Horse</li>
-                            <li class="edition__feature-item">Steelbook Case with Full Game</li>
-                            <li class="edition__feature-item">12" Ellie Statue</li>
-                            <li class="edition__feature-item">Lithography art Print and Thank You Letter</li>
-                            <li class="edition__feature-item">Replica of Ellie's Bracelet</li>
-                            <li class="edition__feature-item">Set of 6 Enamel Pins</li>
-                            <li class="edition__feature-item">Set of 5 Stickers</li>
-                            <li class="edition__feature-item">PS4 Dynamic Theme</li>
-                            <li class="edition__feature-item">Set of 6 PSN Avatars</li>
-                            <li class="edition__feature-item">Digital Soundtrack</li>
-                            <li class="edition__feature-item">Digital Mini Art Book from Dark Horse</li>
-                            <!-- <li class="edition__feature-title">Lorem ipsum dolor sit.</li> -->
-                        </ul>
-                    </div>
-                    <div class="edition__slide">
-                        <div class="edition__text">
-                            <h3 class="title-2 u-mb-2">Special edition</h3>
-                            <a href="#" class="btn">where to buy disc</a>
-                        </div>
-                        <div class="edition__cover">
-                            <img src="./img/ellie-edtion.png" alt="editions" class="edition__img">
-                        </div>
-                        <ul class="edition__features">
-                            <li class="edition__feature-item">48 Page Mini Art Book from Dark Horse</li>
-                            <li class="edition__feature-item">Steelbook Case with Full Game</li>
-                            <li class="edition__feature-item">PS4 Dynamic Theme</li>
-                            <li class="edition__feature-item">Set of 6 PSN Avatars</li>
-                            <li class="edition__feature-item">Digital Soundtrack</li>
-                            <li class="edition__feature-item">Digital Mini Art Book from Dark Horse</li>
-                            <!-- <li class="edition__feature-title">Lorem ipsum dolor sit.</li> -->
-                        </ul>
-                    </div>
-                    <div class="edition__slide">
-                        <div class="edition__text">
-                            <h3 class="title-2 u-mb-2">Standard edition</h3>
-                            <a href="#" class="btn">where to buy disc</a>
-                        </div>
-                        <div class="edition__cover">
-                            <img src="./img/standard-edition.png" alt="editions" class="edition__img">
-                        </div>
-                        <ul class="edition__features"></ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <img src="./img/bottom-dark.png" alt="bottom-dark" class="bottom-dark">
-
-    </section>
-
-    <section class="story u-py-2">
-        
-        <div class="container">
-            <h2 class="title u- u-mb-3 u-centered">A ground breaking experience</h2>
-
-            <div class="story__indicator">
-                <button class="story__dot currentDot"></button>
-                <button class="story__dot"></button>
-                <button class="story__dot"></button>
-            </div>
-            <button class="slider-btn next next--2">
+        <div class="modal">
+            <button class="slider-btn next next--3">
                 <svg class="icon">
                     <use href="./img/sprites.svg#icon-cheveron-right"></use>
                 </svg>
             </button>
-            <button class="slider-btn prev prev--2">
+            <button class="slider-btn prev prev--3">
                 <svg class="icon">
                     <use href="./img/sprites.svg#icon-cheveron-left"></use>
                 </svg>
             </button>
-            <div class="story__slider">
-                
 
-                <div class="story__item">
-                    <div class="story__cover">
-                        <img src="./img/story-1.jpg" alt="story photo" class="story__img">
-                    </div>
-    
-                    <h2 class="title-2 u-mb-1">a complex and emotional story</h2>
-                    <p class="desc">
-                        Experience the escalating moral conflicts created by Ellie’s relentless pursuit of vengeance. The cycle of violence left in her wake will challenge your notions of right versus wrong, good versus evil, and hero versus villain.
-                    </p>
-                </div>
-                <div class="story__item">
-                    <div class="story__cover">
-                        <img src="./img/story-2.jpg" alt="story photo" class="story__img">
-                    </div>
-    
-                    <h2 class="title-2 u-mb-1">TENSE AND DESPERATE ACTION-SURVIVAL</h2>
-                    <p class="desc">
-                        New and evolved gameplay systems deliver upon the life-or-death stakes of Ellie’s journey through the hostile world. Feel her desperate struggle for survival through improved features such as high-intensity melee combat, fluid movement, and dynamic stealth. A broad variety of weapons, crafting items, skills, and upgrades allows you to personalize Ellie’s capabilities to your playstyle.
-                    </p>
-                </div>
-                <div class="story__item">
-                    <div class="story__cover">
-                        <img src="./img/story-3.jpg" alt="story photo" class="story__img">
-                    </div>
-    
-                    <h2 class="title-2 u-mb-1">A BEAUTIFUL YET DANGEROUS WORLD</h2>
-                    <p class="desc">
-                        Set out on Ellie’s journey, taking her from the peaceful mountains and forests of Jackson to the lush, overgrown ruins of greater Seattle. Encounter new survivor groups, unfamiliar and treacherous environments,and terrifying evolutions of the infected. Brought to life by the latest iteration of the Naughty Dog engine, the deadly characters and world are more realistic and meticulously detailed than ever before.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </section>    
-
-    <section id="media" class="wallpapers u-py-2">
-        <div class="container">
-            <h2 class="title u-mb-2">Free Wallpapers</h2>
-            <p class="desc u-centered">
-                Customize your desktop or mobile background with The Last of Us Part II Duality Art, which explores the two sides of Ellie’s journey – from the relative peace she’s found when the story begins to the relentless pursuit of vengeance that follows. Check out a preview of them below and download all four from the link.
-            </p>
-
-            <div class="u-mb-2"></div>
-
-            <div class="gallery">
-                <div class="gallery__item">
-                    <div class="gallery__cover">
-                        <img src="./img/wp-1.jpg" alt="" class="gallery__img">
-                        <button class="expand">
-                            <svg class="icon">
-                                <use xlink:href="./img/sprites.svg#icon-enlarge">
-                                </use>
-                            </svg>
-                        </button>
-                    </div>
-                    <p class="desc u-centered">
-                        "Duality" Light - Desktop Wallpaper
-                    </p>
-
-                </div>
-                <div class="gallery__item">
-                    <div class="gallery__cover">
-                        <img src="./img/wp-2.jpg" alt="" class="gallery__img">
-                        <button class="expand">
-                            <svg class="icon">
-                                <use xlink:href="./img/sprites.svg#icon-enlarge">
-                                </use>
-                            </svg>
-                        </button>
-                    </div>
-                    <p class="desc u-centered">
-                        "Duality" Light - Mobile Wallpaper
-                    </p>
-                </div>
-                <div class="gallery__item">
-                    <div class="gallery__cover">
-                        <img src="./img/wp-3.jpg" alt="" class="gallery__img">
-                        <button class="expand">
-                            <svg class="icon">
-                                <use xlink:href="./img/sprites.svg#icon-enlarge">
-                                </use>
-                            </svg>
-                        </button>
-                    </div>
-                    <p class="desc u-centered">
-                        "Duality" Dark - Mobile Wallpaper
-                    </p>
-                </div>
-                <div class="gallery__item">
-                    <div class="gallery__cover">
-                        <img src="./img/wp-4.jpg" alt="" class="gallery__img">  
-                        <button class="expand">
-                            <svg class="icon">
-                                <use xlink:href="./img/sprites.svg#icon-enlarge">
-                                </use>
-                            </svg>
-                        </button>
-                        
-                    </div>
-                    <p class="desc u-centered">
-                        "Duality" Dark - Desktop Wallpaper
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="screenshots u-py-3">
-        <div class="container">
-            <h2 class="title u-mb-2">Screenshots</h2>
-
-            <div class="collection u-mb-2">
-                <div class="collection__cover st-left">
-                    <img src="./img/1.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/2.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/3.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/4.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/5.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover st-right">
-                    <img src="./img/6.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- CUT OFF -->
-
-                <div class="collection__cover st-left">
-                    <img src="./img/7.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/8.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/9.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/10.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/11.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover st-right">
-                    <img src="./img/12.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-
-                <div class="collection__cover st-left">
-                    <img src="./img/13.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/14.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/15.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/16.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/17.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover st-right">
-                    <img src="./img/18.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-
-                <div class="collection__cover st-left">
-                    <img src="./img/19.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/20.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/21.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/22.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/23.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover st-right">
-                    <img src="./img/24.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                
-                <div class="collection__cover st-left">
-                    <img src="./img/25.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/26.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/27.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/28.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover">
-                    <img src="./img/29.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-                <div class="collection__cover st-right">
-                    <img src="./img/30.jpg" alt="" class="collection__img">
-                    <button class="expand">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-enlarge">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-
-
-                
-            </div>
-
-            <button class="screenshots__btn">
-                Show all 30 screenshots
-                <svg class="icon">
-                    <use xlink:href="./img/sprites.svg#icon-cheveron-down"></use>
-                </svg>
-            </button>
-
-            <h2 class="title u-mb-2">Videos</h2>
-
-            <div class="trailer u-mb-3">
-                <div class="trailer__cover">
-                    <img src="./img/thumbnail-1.jpg" alt="" class="trailer__img">
+            <nav class="modal__nav">
+                <span class="modal__counter">1/30</span>
+                <button class="zoom-out">
                     <svg class="icon">
-                        <use xlink:href="./img/sprites.svg#icon-youtube"></use>
+                        <use xlink:href="./img/sprites.svg#icon-zoom-out"></use>
                     </svg>
+                </button>
+                <button class="zoom-in">
+                    <svg class="icon">
+                        <use xlink:href="./img/sprites.svg#icon-zoom-in"></use>
+                    </svg>
+                </button>
+                <button class="fullscreen">
+                    <svg class="icon">
+                        <use
+                            xlink:href="./img/sprites.svg#icon-fullscreen"
+                        ></use>
+                    </svg>
+                </button>
+                <button class="close">
+                    <svg class="icon">
+                        <use xlink:href="./img/sprites.svg#icon-clear"></use>
+                    </svg>
+                </button>
+            </nav>
+
+            <div class="modal__cover">
+                <img
+                    src="./img/wp-1.jpg"
+                    alt="modal photo"
+                    class="modal__img"
+                />
+                <iframe
+                    src="https://www.youtube.com/embed/ddIr0VngnaU"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        </div>
+
+        <!-- MODAL -->
+
+        <nav class="nav">
+            <div class="container">
+                <img
+                    src="./img/nav-logo.png"
+                    alt="logo-navi"
+                    class="nav__logo"
+                />
+
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">ABOUT</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#media" class="nav__link">MEDIA</a>
+                    </li>
+                </ul>
+
+                <button class="menu">
+                    <svg class="icon">
+                        <use href="./img/sprites.svg#icon-menu"></use>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div class="nav__overlay">
+            <li class="nav__item"><a href="#" class="nav__link">ABOUT</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">MEDIA</a></li>
+        </div>
+
+        <header class="header">
+            <video class="header__vid" autoplay muted loop>
+                <source src="./img/showcasevid.mp4" type="video/mp4" />
+                Not supported in your browser
+            </video>
+            <div class="container">
+                <div class="header__hero">
+                    <div class="header__logo">
+                        <img
+                            src="./img/big-logo.png"
+                            alt="logo"
+                            class="header__img"
+                        />
+                    </div>
+                    <h2 class="header__date">Available 06.19.2020</h2>
                 </div>
-                <p class="desc">The Last of Us Part II - Official Story Trailer | PS4
+            </div>
+
+            <img src="./img/bottom-dark.png" alt="" class="bottom-dark" />
+        </header>
+        <section id="about" class="intro u-py-5">
+            <div class="container">
+                <div class="intro__cover">
+                    <img
+                        src="./img/ellie-mad.jpg"
+                        alt="ellie mad"
+                        class="intro__img"
+                    />
+                </div>
+                <div class="intro__text">
+                    <h2 class="title u-mb-2">THE LAST OF US PART II</h2>
+                    <p class="desc u-mb-1">
+                        Five years after their dangerous journey across the
+                        post-pandemic United States, Ellie and Joel have settled
+                        down in Jackson, Wyoming. Living amongst a thriving
+                        community of survivors has allowed them peace and
+                        stability, despite the constant threat of the infected
+                        and other, more desperate survivors.
+                    </p>
+                    <p class="desc">
+                        When a violent event disrupts that peace, Ellie embarks
+                        on a relentless journey to carry out justice and find
+                        closure. As she hunts those responsible one by one, she
+                        is confronted with the devastating physical and
+                        emotional repercussions of her actions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="edition u-py-4">
+            <img src="./img/top-dark.png" alt="top-dark" class="top-dark" />
+
+            <div class="container">
+                <h2 class="title u-mb-2">Choose your edition</h2>
+                <div class="edition-list-container">
+                    <ul class="edition__list u-mb-3">
+                        <li class="edition__item pickedEdition">
+                            Ellie edition
+                        </li>
+                        <li class="edition__item">Collector's edition</li>
+                        <li class="edition__item">special edition</li>
+                        <li class="edition__item">standard editions</li>
+                    </ul>
+                </div>
+
+                <div class="slider">
+                    <button class="slider-btn next next--1">
+                        <svg class="icon">
+                            <use
+                                href="./img/sprites.svg#icon-cheveron-right"
+                            ></use>
+                        </svg>
+                    </button>
+                    <button class="slider-btn prev prev--1">
+                        <svg class="icon">
+                            <use
+                                href="./img/sprites.svg#icon-cheveron-left"
+                            ></use>
+                        </svg>
+                    </button>
+
+                    <div class="edition__slider">
+                        <div class="edition__slide">
+                            <div class="edition__text">
+                                <h3 class="title-2 u-mb-2">Ellie edition</h3>
+                                <a href="#" class="btn">where to buy disc</a>
+                            </div>
+                            <div class="edition__cover">
+                                <img
+                                    src="./img/ellie-edtion.png"
+                                    alt="editions"
+                                    class="edition__img"
+                                />
+                            </div>
+                            <ul class="edition__features">
+                                <li class="edition__feature-title">
+                                    The Last of Us Part II Ellie Edition
+                                    includes:
+                                </li>
+                                <li class="edition__feature-item">
+                                    The Last of US Part II Logo Patch
+                                </li>
+                                <li class="edition__feature-item">
+                                    7" Vinyl Record featuring Music from the
+                                    Original Soundtrack
+                                </li>
+                                <li class="edition__feature-item">
+                                    Replica of Ellie's Backpack
+                                </li>
+                                <li class="edition__feature-item">
+                                    48 Page Mini Art Book from Dark Horse
+                                </li>
+                                <li class="edition__feature-item">
+                                    Steelbook Case with Full Game
+                                </li>
+                                <li class="edition__feature-item">
+                                    12" Ellie Statue
+                                </li>
+                                <li class="edition__feature-item">
+                                    Lithography art Print and Thank You Letter
+                                </li>
+                                <li class="edition__feature-item">
+                                    Replica of Ellie's Bracelet
+                                </li>
+                                <li class="edition__feature-item">
+                                    Set of 6 Enamel Pins
+                                </li>
+                                <li class="edition__feature-item">
+                                    Set of 5 Stickers
+                                </li>
+                                <li class="edition__feature-item">
+                                    PS4 Dynamic Theme
+                                </li>
+                                <li class="edition__feature-item">
+                                    Set of 6 PSN Avatars
+                                </li>
+                                <li class="edition__feature-item">
+                                    Digital Soundtrack
+                                </li>
+                                <li class="edition__feature-item">
+                                    Digital Mini Art Book from Dark Horse
+                                </li>
+                                <!-- <li class="edition__feature-title">Lorem ipsum dolor sit.</li> -->
+                            </ul>
+                        </div>
+                        <div class="edition__slide">
+                            <div class="edition__text">
+                                <h3 class="title-2 u-mb-2">
+                                    Collector's edition
+                                </h3>
+                                <a href="#" class="btn">where to buy disc</a>
+                            </div>
+                            <div class="edition__cover">
+                                <img
+                                    src="./img/collectors-edition.png"
+                                    alt="editions"
+                                    class="edition__img"
+                                />
+                            </div>
+                            <ul class="edition__features">
+                                <li class="edition__feature-title">
+                                    The Last of Us Part II Collector's Edition
+                                    includes:
+                                </li>
+                                <li class="edition__feature-item">
+                                    48 Page Mini Art Book from Dark Horse
+                                </li>
+                                <li class="edition__feature-item">
+                                    Steelbook Case with Full Game
+                                </li>
+                                <li class="edition__feature-item">
+                                    12" Ellie Statue
+                                </li>
+                                <li class="edition__feature-item">
+                                    Lithography art Print and Thank You Letter
+                                </li>
+                                <li class="edition__feature-item">
+                                    Replica of Ellie's Bracelet
+                                </li>
+                                <li class="edition__feature-item">
+                                    Set of 6 Enamel Pins
+                                </li>
+                                <li class="edition__feature-item">
+                                    Set of 5 Stickers
+                                </li>
+                                <li class="edition__feature-item">
+                                    PS4 Dynamic Theme
+                                </li>
+                                <li class="edition__feature-item">
+                                    Set of 6 PSN Avatars
+                                </li>
+                                <li class="edition__feature-item">
+                                    Digital Soundtrack
+                                </li>
+                                <li class="edition__feature-item">
+                                    Digital Mini Art Book from Dark Horse
+                                </li>
+                                <!-- <li class="edition__feature-title">Lorem ipsum dolor sit.</li> -->
+                            </ul>
+                        </div>
+                        <div class="edition__slide">
+                            <div class="edition__text">
+                                <h3 class="title-2 u-mb-2">Special edition</h3>
+                                <a href="#" class="btn">where to buy disc</a>
+                            </div>
+                            <div class="edition__cover">
+                                <img
+                                    src="./img/ellie-edtion.png"
+                                    alt="editions"
+                                    class="edition__img"
+                                />
+                            </div>
+                            <ul class="edition__features">
+                                <li class="edition__feature-item">
+                                    48 Page Mini Art Book from Dark Horse
+                                </li>
+                                <li class="edition__feature-item">
+                                    Steelbook Case with Full Game
+                                </li>
+                                <li class="edition__feature-item">
+                                    PS4 Dynamic Theme
+                                </li>
+                                <li class="edition__feature-item">
+                                    Set of 6 PSN Avatars
+                                </li>
+                                <li class="edition__feature-item">
+                                    Digital Soundtrack
+                                </li>
+                                <li class="edition__feature-item">
+                                    Digital Mini Art Book from Dark Horse
+                                </li>
+                                <!-- <li class="edition__feature-title">Lorem ipsum dolor sit.</li> -->
+                            </ul>
+                        </div>
+                        <div class="edition__slide">
+                            <div class="edition__text">
+                                <h3 class="title-2 u-mb-2">Standard edition</h3>
+                                <a href="#" class="btn">where to buy disc</a>
+                            </div>
+                            <div class="edition__cover">
+                                <img
+                                    src="./img/standard-edition.png"
+                                    alt="editions"
+                                    class="edition__img"
+                                />
+                            </div>
+                            <ul class="edition__features"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img
+                src="./img/bottom-dark.png"
+                alt="bottom-dark"
+                class="bottom-dark"
+            />
+        </section>
+
+        <section class="story u-py-2">
+            <div class="container">
+                <h2 class="title u- u-mb-3 u-centered">
+                    A ground breaking experience
+                </h2>
+
+                <div class="story__indicator">
+                    <button class="story__dot currentDot"></button>
+                    <button class="story__dot"></button>
+                    <button class="story__dot"></button>
+                </div>
+                <button class="slider-btn next next--2">
+                    <svg class="icon">
+                        <use href="./img/sprites.svg#icon-cheveron-right"></use>
+                    </svg>
+                </button>
+                <button class="slider-btn prev prev--2">
+                    <svg class="icon">
+                        <use href="./img/sprites.svg#icon-cheveron-left"></use>
+                    </svg>
+                </button>
+                <div class="story__slider">
+                    <div class="story__item">
+                        <div class="story__cover">
+                            <img
+                                src="./img/story-1.jpg"
+                                alt="story photo"
+                                class="story__img"
+                            />
+                        </div>
+
+                        <h2 class="title-2 u-mb-1">
+                            a complex and emotional story
+                        </h2>
+                        <p class="desc">
+                            Experience the escalating moral conflicts created by
+                            Ellie’s relentless pursuit of vengeance. The cycle
+                            of violence left in her wake will challenge your
+                            notions of right versus wrong, good versus evil, and
+                            hero versus villain.
+                        </p>
+                    </div>
+                    <div class="story__item">
+                        <div class="story__cover">
+                            <img
+                                src="./img/story-2.jpg"
+                                alt="story photo"
+                                class="story__img"
+                            />
+                        </div>
+
+                        <h2 class="title-2 u-mb-1">
+                            TENSE AND DESPERATE ACTION-SURVIVAL
+                        </h2>
+                        <p class="desc">
+                            New and evolved gameplay systems deliver upon the
+                            life-or-death stakes of Ellie’s journey through the
+                            hostile world. Feel her desperate struggle for
+                            survival through improved features such as
+                            high-intensity melee combat, fluid movement, and
+                            dynamic stealth. A broad variety of weapons,
+                            crafting items, skills, and upgrades allows you to
+                            personalize Ellie’s capabilities to your playstyle.
+                        </p>
+                    </div>
+                    <div class="story__item">
+                        <div class="story__cover">
+                            <img
+                                src="./img/story-3.jpg"
+                                alt="story photo"
+                                class="story__img"
+                            />
+                        </div>
+
+                        <h2 class="title-2 u-mb-1">
+                            A BEAUTIFUL YET DANGEROUS WORLD
+                        </h2>
+                        <p class="desc">
+                            Set out on Ellie’s journey, taking her from the
+                            peaceful mountains and forests of Jackson to the
+                            lush, overgrown ruins of greater Seattle. Encounter
+                            new survivor groups, unfamiliar and treacherous
+                            environments,and terrifying evolutions of the
+                            infected. Brought to life by the latest iteration of
+                            the Naughty Dog engine, the deadly characters and
+                            world are more realistic and meticulously detailed
+                            than ever before.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="media" class="wallpapers u-py-2">
+            <div class="container">
+                <h2 class="title u-mb-2">Free Wallpapers</h2>
+                <p class="desc u-centered">
+                    Customize your desktop or mobile background with The Last of
+                    Us Part II Duality Art, which explores the two sides of
+                    Ellie’s journey – from the relative peace she’s found when
+                    the story begins to the relentless pursuit of vengeance that
+                    follows. Check out a preview of them below and download all
+                    four from the link.
                 </p>
-            </div>
 
-            <div class="mini-trailer u-mb-5">
-                <div class="trailer">
+                <div class="u-mb-2"></div>
+
+                <div class="gallery">
+                    <div class="gallery__item">
+                        <div class="gallery__cover">
+                            <img
+                                src="./img/wp-1.jpg"
+                                alt=""
+                                class="gallery__img"
+                            />
+                            <button class="expand">
+                                <svg class="icon">
+                                    <use
+                                        xlink:href="./img/sprites.svg#icon-enlarge"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="desc u-centered">
+                            "Duality" Light - Desktop Wallpaper
+                        </p>
+                    </div>
+                    <div class="gallery__item">
+                        <div class="gallery__cover">
+                            <img
+                                src="./img/wp-2.jpg"
+                                alt=""
+                                class="gallery__img"
+                            />
+                            <button class="expand">
+                                <svg class="icon">
+                                    <use
+                                        xlink:href="./img/sprites.svg#icon-enlarge"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="desc u-centered">
+                            "Duality" Light - Mobile Wallpaper
+                        </p>
+                    </div>
+                    <div class="gallery__item">
+                        <div class="gallery__cover">
+                            <img
+                                src="./img/wp-3.jpg"
+                                alt=""
+                                class="gallery__img"
+                            />
+                            <button class="expand">
+                                <svg class="icon">
+                                    <use
+                                        xlink:href="./img/sprites.svg#icon-enlarge"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="desc u-centered">
+                            "Duality" Dark - Mobile Wallpaper
+                        </p>
+                    </div>
+                    <div class="gallery__item">
+                        <div class="gallery__cover">
+                            <img
+                                src="./img/wp-4.jpg"
+                                alt=""
+                                class="gallery__img"
+                            />
+                            <button class="expand">
+                                <svg class="icon">
+                                    <use
+                                        xlink:href="./img/sprites.svg#icon-enlarge"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="desc u-centered">
+                            "Duality" Dark - Desktop Wallpaper
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="screenshots u-py-3">
+            <div class="container">
+                <h2 class="title u-mb-2">Screenshots</h2>
+
+                <div class="collection u-mb-2">
+                    <div class="collection__cover st-left">
+                        <img src="./img/1.jpg" alt="" class="collection__img" />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img src="./img/2.jpg" alt="" class="collection__img" />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img src="./img/3.jpg" alt="" class="collection__img" />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img src="./img/4.jpg" alt="" class="collection__img" />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img src="./img/5.jpg" alt="" class="collection__img" />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover st-right">
+                        <img src="./img/6.jpg" alt="" class="collection__img" />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- CUT OFF -->
+
+                    <div class="collection__cover st-left">
+                        <img src="./img/7.jpg" alt="" class="collection__img" />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img src="./img/8.jpg" alt="" class="collection__img" />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img src="./img/9.jpg" alt="" class="collection__img" />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img
+                            src="./img/10.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img
+                            src="./img/11.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover st-right">
+                        <img
+                            src="./img/12.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="collection__cover st-left">
+                        <img
+                            src="./img/13.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img
+                            src="./img/14.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img
+                            src="./img/15.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img
+                            src="./img/16.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img
+                            src="./img/17.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover st-right">
+                        <img
+                            src="./img/18.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="collection__cover st-left">
+                        <img
+                            src="./img/19.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img
+                            src="./img/20.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img
+                            src="./img/21.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img
+                            src="./img/22.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img
+                            src="./img/23.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover st-right">
+                        <img
+                            src="./img/24.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="collection__cover st-left">
+                        <img
+                            src="./img/25.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img
+                            src="./img/26.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img
+                            src="./img/27.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img
+                            src="./img/28.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover">
+                        <img
+                            src="./img/29.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="collection__cover st-right">
+                        <img
+                            src="./img/30.jpg"
+                            alt=""
+                            class="collection__img"
+                        />
+                        <button class="expand">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-enlarge"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="screenshots__btn">
+                    Show all 30 screenshots
+                    <svg class="icon">
+                        <use
+                            xlink:href="./img/sprites.svg#icon-cheveron-down"
+                        ></use>
+                    </svg>
+                </button>
+
+                <h2 class="title u-mb-2">Videos</h2>
+
+                <div class="trailer u-mb-3">
                     <div class="trailer__cover">
-                        <img src="./img/thumbnail-2.jpg" alt="" class="trailer__img">
+                        <img
+                            src="./img/thumbnail-1.jpg"
+                            alt=""
+                            class="trailer__img"
+                        />
                         <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-youtube"></use>
+                            <use
+                                xlink:href="./img/sprites.svg#icon-youtube"
+                            ></use>
                         </svg>
                     </div>
-                    <p class="desc">The Last of Us Part II - Inside the Story | PS4
+                    <p class="desc">
+                        The Last of Us Part II - Official Story Trailer | PS4
                     </p>
                 </div>
-                <div class="trailer">
-                    <div class="trailer__cover">
-                        <img src="./img/thumbnail-3.jpg" alt="" class="trailer__img">
-                        <svg class="icon">
-                            <use xlink:href="./img/sprites.svg#icon-youtube"></use>
-                        </svg>
+
+                <div class="mini-trailer u-mb-5">
+                    <div class="trailer">
+                        <div class="trailer__cover">
+                            <img
+                                src="./img/thumbnail-2.jpg"
+                                alt=""
+                                class="trailer__img"
+                            />
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-youtube"
+                                ></use>
+                            </svg>
+                        </div>
+                        <p class="desc">
+                            The Last of Us Part II - Inside the Story | PS4
+                        </p>
                     </div>
-                    <p class="desc">The Last of Us Part II - Gameplay Trailer | PS4
-                    </p>
+                    <div class="trailer">
+                        <div class="trailer__cover">
+                            <img
+                                src="./img/thumbnail-3.jpg"
+                                alt=""
+                                class="trailer__img"
+                            />
+                            <svg class="icon">
+                                <use
+                                    xlink:href="./img/sprites.svg#icon-youtube"
+                                ></use>
+                            </svg>
+                        </div>
+                        <p class="desc">
+                            The Last of Us Part II - Gameplay Trailer | PS4
+                        </p>
+                    </div>
                 </div>
-        
-            </div>
 
-            <p class="desc">* The above information is subject to change without prior notice.</p>
-            <p class="desc u-mb-5">* This game/content may not be available in some countries and regions and in some languages.</p>
-
-            <a href="#" class="logo u-mb-2">
-                <img src="./img/logo.png" alt="" class="logo__img">
-            </a>
-
-            <p class="desc u-centered note">
-                ©Sony Interactive Entertainment LLC. Created and developed by Naughty Dog, LLC.
-            </p>
-        </div>
-    </section>
-
-    <footer class="footer u-py-1">
-        <div class="footer__head">
-            <a href="#" class="footer__logo">
-                <svg class="icon">
-                    <use xlink:href="./img/sprites.svg#icon-playstation"></use>
-                </svg>
-            </a>
-            <ul class="footer__list">
-                <li class="footer__item"><a href="#" class="footer__link">Support</a></li>
-                <li class="footer__item"><a href="#" class="footer__link">Terms and Condition</a></li>
-                <li class="footer__item"><a href="#" class="footer__link">Privacy Policy</a></li>
-                <li class="footer__item"><a href="#" class="footer__link">Press Releases</a></li>
-                <li class="footer__item"><a href="#" class="footer__link">Legal</a></li>
-                <li class="footer__item"><a href="#" class="footer__link">Site Map</a></li>
-                <li class="footer__item"><a href="#" class="footer__link">Intellectual Property Notices</a></li>
-                <li class="footer__item"><a href="#" class="footer__link">Publisher&Developer Relations</a></li>
-            </ul>
-        </div>
-
-        <div class="footer__bottom u-py-2">
-            <span>
-                <a href="#" class="country">
-                    <svg class="icon">
-                        <use xlink:href="./img/sprites.svg#icon-web"></use>
-                    </svg>
-                    Country/regions:Philippines
-                </a>
-
-                <a href="#" class="sony">
-                    <svg class="icon">
-                        <use xlink:href="./img/sprites.svg#icon-cheveron-right"></use>
-                    </svg>
-                    about sony
-                </a>
-            </span>
-        </div>
                 <p class="desc">
-                    ©2020 Sony Interactive Entertainment Inc. All Rights Reserved.
+                    * The above information is subject to change without prior
+                    notice.
                 </p>
-        
-    </footer>
-</body>
+                <p class="desc u-mb-5">
+                    * This game/content may not be available in some countries
+                    and regions and in some languages.
+                </p>
+
+                <a href="#" class="logo u-mb-2">
+                    <img src="./img/logo.png" alt="" class="logo__img" />
+                </a>
+
+                <p class="desc u-centered note">
+                    ©Sony Interactive Entertainment LLC. Created and developed
+                    by Naughty Dog, LLC.
+                </p>
+            </div>
+        </section>
+
+        <footer class="footer u-py-1">
+            <div class="footer__head">
+                <a href="#" class="footer__logo">
+                    <svg class="icon">
+                        <use
+                            xlink:href="./img/sprites.svg#icon-playstation"
+                        ></use>
+                    </svg>
+                </a>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Support</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Terms and Condition</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Privacy Policy</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Press Releases</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Legal</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Site Map</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link"
+                            >Intellectual Property Notices</a
+                        >
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link"
+                            >Publisher&Developer Relations</a
+                        >
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__bottom u-py-2">
+                <span>
+                    <a href="#" class="country">
+                        <svg class="icon">
+                            <use xlink:href="./img/sprites.svg#icon-web"></use>
+                        </svg>
+                        Country/regions:Philippines
+                    </a>
+
+                    <a href="#" class="sony">
+                        <svg class="icon">
+                            <use
+                                xlink:href="./img/sprites.svg#icon-cheveron-right"
+                            ></use>
+                        </svg>
+                        about sony
+                    </a>
+                </span>
+            </div>
+            <p class="desc">
+                ©2020 Sony Interactive Entertainment Inc. All Rights Reserved.
+            </p>
+        </footer>
+    </body>
 </html>

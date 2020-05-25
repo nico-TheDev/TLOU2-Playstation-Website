@@ -1,8 +1,46 @@
-// on and off navbar
-
+//variables 
+// Navbar Variables
 const navi = document.querySelector('.nav');
 const naviLogo = document.querySelector('.nav__logo');
-// let prevScrollPos = window.pageYOffset;
+const navOverlay = document.querySelector('.nav__overlay');
+const navBtn = document.querySelector('.menu');
+// on and off navbar
+//edition variables
+const sliderItem = document.querySelectorAll('.edition__slide');
+const editionNextBtn = document.querySelector('.next--1');
+const editionPrevBtn = document.querySelector('.prev--1');
+const editionLabel = document.querySelectorAll('.edition__item');
+const editionList = document.querySelector('.edition__list');
+let editionCount = 0;
+
+//media query
+const mq = window.matchMedia('(max-width:900px)');
+
+// Screenshots Variables
+const showScreenshotBtn =  document.querySelector('.screenshots__btn');
+const screenshots = document.querySelectorAll('.collection__cover');
+const screenshotBtnOffset = showScreenshotBtn.getBoundingClientRect();
+let btnTopOffset = screenshotBtnOffset.top;
+
+
+//modal variables
+//modal for wallpapers
+const wallpapers = document.querySelector('.gallery');
+const modal = document.querySelector('.modal');
+
+// modal btn
+
+const modalCloseBtn = document.querySelector('.close');
+const modalImg = document.querySelector('.modal__img');
+const modalNextBtn = document.querySelector('.next--3');
+const modalPrevBtn = document.querySelector('.prev--3');
+let modalCount = 1;
+const ytVid = document.querySelector('iframe');
+const modalCounter = document.querySelector('.modal__counter');
+
+//modal for videso
+const trailers = document.querySelectorAll('.trailer');
+const modalCover = document.querySelector('.modal__cover');
 
 window.onscroll = function() {
     let currentScrollPos = window.pageYOffset;
@@ -17,15 +55,9 @@ window.onscroll = function() {
         navi.classList.remove('showNavi');
         naviLogo.classList.remove('showNaviLogo');
     }
-
-
-
 }
 
 // Slide in nav overlay
-
-const navOverlay = document.querySelector('.nav__overlay');
-const navBtn = document.querySelector('.menu');
 navBtn.addEventListener('click',()=>{
     navOverlay.classList.toggle('slideInOverlay');
     navi.classList.remove('showNavi');
@@ -43,16 +75,10 @@ navBtn.addEventListener('click',()=>{
 
 //edition slider 
 
-const sliderItem = document.querySelectorAll('.edition__slide');
-const editionNextBtn = document.querySelector('.next--1');
-const editionPrevBtn = document.querySelector('.prev--1');
-const editionLabel = document.querySelectorAll('.edition__item');
-const editionList = document.querySelector('.edition__list');
 sliderItem.forEach((slide,index)=>{
     slide.style.left = `${index * 100}%`;
 })
 
-let editionCount = 0;
 editionPrevBtn.style.display = 'none';
 
 editionNextBtn.addEventListener('click',()=>{
@@ -95,39 +121,33 @@ function moveEdition(){
     });
 
     sliderItem.forEach((slide,index)=>{
-        slide.style.transform = `translateX(-${editionCount * 100}%)`
+        slide.style.transform = `translateX(-${editionCount * 100}%)`;
     });
 
     editionLabel.forEach((label,index) =>{
         if(editionCount === 1){
-            editionList.style.transform = `translateX(-100px)`
+            editionList.style.transform = `translateX(-100px)`;
         }
         else{
             editionList.style.transform = `translateX(-${(label.clientWidth) * editionCount}px)`;
         }
     });
-    // editionList.style.transform = `translateX(-${(editionList.clientWidth / editionList.children[editionCount].clientWidth) * 100})%`;
-
 }
 
 
 //mobile story slider
-
-const mq = window.matchMedia('(max-width:900px)');
 
 if(mq){
     const storyItems = document.querySelectorAll('.story__item');
     const storyNextBtn = document.querySelector('.next--2');
     const storyPrevBtn = document.querySelector('.prev--2');
     const storyDots = document.querySelectorAll('.story__dot');
+    let storyCount = 0;
     storyPrevBtn.style.display = 'none';
 
     storyItems.forEach((item,index)=>{
         item.style.left = `${index * 100}%`;
     })
-
-    let storyCount = 0;
-
 
     storyDots.forEach((dot,index)=>{
         dot.addEventListener('click',function(){
@@ -176,12 +196,7 @@ if(mq){
  
 }
 
-// show screenshots
-const showScreenshotBtn =  document.querySelector('.screenshots__btn');
-const screenshots = document.querySelectorAll('.collection__cover');
-const screenshotBtnOffset = showScreenshotBtn.getBoundingClientRect();
-let btnTopOffset = screenshotBtnOffset.top;
-
+// Show Screenshots
 showScreenshotBtn.addEventListener('click',showScreenshots);
 
 for(let i = 6; i < screenshots.length;i++){
@@ -202,19 +217,6 @@ function showScreenshots(){
     }
 }
 
-//modal for wallpapers
-const wallpapers = document.querySelector('.gallery');
-const modal = document.querySelector('.modal');
-
-// modal btn
-
-const modalCloseBtn = document.querySelector('.close');
-const modalImg = document.querySelector('.modal__img');
-const modalNextBtn = document.querySelector('.next--3');
-const modalPrevBtn = document.querySelector('.prev--3');
-let modalCount;
-const ytVid = document.querySelector('iframe');
-const modalCounter = document.querySelector('.modal__counter');
 
 modalCloseBtn.addEventListener('click',()=>{
     modal.classList.remove('showModal');
@@ -288,9 +290,6 @@ function showNextImg(){
 
 }
 //modal for videos
-
-const trailers = document.querySelectorAll('.trailer');
-const modalCover = document.querySelector('.modal__cover');
 ytVid.style.display = 'none';
 trailers.forEach((trailer,index)=>{
     trailer.addEventListener('click',function(){

@@ -1,67 +1,62 @@
-.trailer{
+.trailer {
     cursor: pointer;
-    &:hover .icon{
-        fill: red  ;
+    &:hover .icon {
+        fill: red;
     }
 
-    &__cover{
+    &__cover {
         position: relative;
     }
 
-
-
     &__img,
-    .desc
-    {
+    .desc {
         width: 90%;
         height: auto;
         margin: 1rem auto;
         display: block;
 
-        @include query(cp){
+        @include query(cp) {
             width: 100%;
         }
     }
 
-    .icon{
+    .icon {
         @include absoluteCenter;
         width: 7rem;
         height: 7rem;
         transition: 300ms;
 
-        @include query(cp){
+        @include query(cp) {
             width: 4rem;
             height: 4rem;
         }
     }
-
-
 }
 
-.mini-trailer{
+.mini-trailer {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
 
-    @include query(cp){
+    @include query(cp) {
         grid-template-columns: 1fr;
     }
 
-    .trailer{
-        &__img{
+    .trailer {
+        &__img {
             width: 100%;
         }
-        .icon{
+        .icon {
             width: 4rem;
             height: 4rem;
         }
     }
 }
 
-.logo{
+.logo {
     display: inline-block;
 
-    &__img{
+    &__img {
         width: 20rem;
     }
 }

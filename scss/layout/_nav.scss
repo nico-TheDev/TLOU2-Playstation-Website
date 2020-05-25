@@ -1,4 +1,4 @@
-.nav{
+.nav {
     position: fixed;
     width: 100%;
     top: 0;
@@ -9,80 +9,77 @@
     transition: 300ms ease;
     overflow: hidden;
 
-    .container{
+    .container {
         height: 12vh;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        @include query(cp){
+        @include query(cp) {
             padding: 2rem;
         }
     }
-    &__logo{
+    &__logo {
         width: 8rem;
         height: auto;
         opacity: 0;
         transition: 300ms ease;
     }
 
-    &__list{
+    &__list {
         display: flex;
 
-        @include query(cp){
+        @include query(cp) {
             display: none;
         }
     }
 
-    &__link{
+    &__link {
         margin-left: 3rem;
         font-size: 1.3rem;
         color: $gray;
         font-weight: bold;
-        font-family: 'Oswald',sans-serif;
-        &:hover{
+        font-family: "Oswald", sans-serif;
+        &:hover {
             color: $main;
         }
     }
 
-    .menu{
+    .menu {
         display: none;
 
-        .icon{
-            fill:$gray;
+        .icon {
+            fill: $gray;
             width: 2rem;
         }
-        @include query(cp){
+        @include query(cp) {
             display: block;
         }
     }
 
-
-
-
-    &__overlay{
+    &__overlay {
         position: fixed;
         height: 100vh;
-        background-color: rgba(black,0.9);
+        background-color: rgba(black, 0.9);
         width: 100%;
         top: 0;
-        left:0;
+        left: 0;
         display: grid;
         justify-items: center;
         align-items: start;
-        align-content:start;
+        align-content: start;
         padding-top: 12vh;
         transform: translateX(-100%);
         transition: 500ms;
         text-align: center;
         z-index: 99;
-        .nav__link{
+        .nav__link {
             color: $main;
             text-align: center;
-            margin:0;
+            margin: 0;
         }
 
-        .nav__item{
+        .nav__item {
         }
     }
 }

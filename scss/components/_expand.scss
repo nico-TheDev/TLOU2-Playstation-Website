@@ -1,13 +1,13 @@
-.expand{
+.expand {
     width: 2rem;
     height: 2rem;
     position: absolute;
     bottom: 1rem;
     right: 1rem;
-    background-color: rgba(black,0.5);
+    background-color: rgba(black, 0.5);
     @include flexCenter;
 
-    .icon{
+    .icon {
         fill: white;
         width: 1.2rem;
         height: 1.2rem;

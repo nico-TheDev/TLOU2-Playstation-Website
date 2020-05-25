@@ -1,74 +1,73 @@
-.btn{
+.btn {
     background-color: $main;
     text-transform: uppercase;
     color: black;
-    font-family: 'Oswald',sans-serif;
+    font-family: "Oswald", sans-serif;
     font-weight: bold;
     padding: 0.3em 1em;
     border: 3px solid $main;
     transition: 300ms;
     &:link,
-    &:visited{
+    &:visited {
         background-color: $main;
         text-transform: uppercase;
         color: black;
-        font-family: 'Oswald',sans-serif;
+        font-family: "Oswald", sans-serif;
         font-weight: bold;
         padding: 0.5em 1em;
         border: 3px solid $main;
     }
 
-    &:hover{
-        background-color: rgba($main,0.5);
+    &:hover {
+        background-color: rgba($main, 0.5);
         color: white;
     }
 }
 
-.slider-btn{
+.slider-btn {
     background-color: $main;
     display: inline-block;
     position: absolute;
     top: 50%;
-    transform:translateY(-50%);
+    transform: translateY(-50%);
 
-    @include query(cp){
+    @include query(cp) {
         top: 12%;
         z-index: 10;
     }
 }
 
-
-.next{
+.next {
     right: -4rem;
-    @include query(cp){
+    @include query(cp) {
         right: 0;
     }
 
-    &--3{
+    &--3 {
         width: 4rem;
         height: 4rem;
         right: 2rem;
         display: none;
 
-        @include query(cp){
+        @include query(cp) {
             top: 60%;
         }
     }
 }
 
-.prev{
+.prev {
     left: -4rem;
-    @include query(cp){
+    @include query(cp) {
         left: 0rem;
     }
 
-    &--3{
+    &--3 {
         width: 4rem;
         height: 4rem;
         left: 2rem;
         display: none;
 
-        @include query(cp){
+        @include query(cp) {
             top: 60%;
         }
     }

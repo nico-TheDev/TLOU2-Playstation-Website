@@ -1,29 +1,29 @@
-.showNavi{
-    background-color: rgba(black,0.9);
+.showNavi {
+    background-color: rgba(black, 0.9);
 }
-.showNaviLogo{
+.showNaviLogo {
     opacity: 1;
 }
 
-// 
+//
 
-.pickedEdition{
+.pickedEdition {
     border-color: $main;
     color: white;
 }
 
-.slideInOverlay{
+.slideInOverlay {
     transform: translateX(0);
 }
 
-.currentDot{
+.currentDot {
     background-color: $main;
 }
 
-.showScreenshot{
+.showScreenshot {
     display: block !important;
 }
 
-.showModal{
+.showModal {
     transform: scale(1);
 }
